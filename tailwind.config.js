@@ -6,7 +6,11 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            font: {
+                sans: ['Segoe UI', 'sans-serif'],
+            }
+        },
     },
     plugins: [],
 }
