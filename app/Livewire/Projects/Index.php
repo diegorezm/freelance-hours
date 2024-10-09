@@ -8,6 +8,7 @@ use Livewire\Component;
 
 class Index extends Component
 {
+    public $proposal_count = 0;
     public function render()
     {
         return view('livewire.projects.index');

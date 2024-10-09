@@ -1,1 +1,1 @@
-<x-proposals :proposals="$project->proposals" />
+<x-proposals.index :proposals="$project->proposals" :count="$proposal_count" />
