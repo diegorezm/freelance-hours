@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Project;
 use App\Models\Proposal;
+use ArrangePosition;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ->each(function (User $u) {
                 $projects = Project::factory()->create(['created_by' => $u->id]);
                 Proposal::factory()->count(fake()->numberBetween(4, 45))->create(['project_id' => $projects->id]);
+                ArrangePosition::run($projects->id);
             });
     }
 }
